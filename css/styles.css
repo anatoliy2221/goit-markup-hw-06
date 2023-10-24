@@ -7,8 +7,6 @@ body {
     line-height: 1.5;
 }
 
-
-
 h1,
 h2,
 h3,
@@ -60,12 +58,9 @@ button {
     position: relative;
 }
 
-
-
 .header-navigation {
     display: flex;
     align-items: start;
-
 }
 
 .logo {
@@ -153,7 +148,7 @@ button {
     color: #404BBF;
 }
 
-.solid-menu {
+.solid-menu-btn {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -168,6 +163,94 @@ button {
     padding: 0;
 }
 
+.mob-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    padding: 24px 24px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: auto;
+    visibility: hidden;
+}
+
+.mob-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.mob-btn-close {
+    display: block;
+    margin-left: auto;
+    /*margin-bottom: 24px;
+    border-radius: 50%;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);*/
+}
+
+.mob-btn-icon {
+    stroke-width: 1px;
+    stroke: #2E2F42;
+}
+
+.mob-navigation-list {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: left;
+    align-items: start;*/
+    gap: 40px;
+}
+
+.mob-navigation-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.mob-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /*margin-bottom: 48px;*/
+}
+
+.mob-contacts-link {
+    color: #434455;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.20;
+    letter-spacing: 0.02em;
+
+}
+
+.mob-navigation-item {}
+
+
+
+.mob-navigation-link:hover,
+.mob-navigation-link:focus {
+    color: #404BBF;
+}
+
+.mob-social-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+}
+
+
+
 /*=========================================*/
 /*===============HERO======================*/
 
@@ -178,7 +261,7 @@ button {
     max-width: 320px;
     background-color: #2E2F42;
     padding: 72px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_mob1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -851,7 +934,7 @@ button {
 
 @media (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office_mob2@2x.jpg);
     }
 }
 
